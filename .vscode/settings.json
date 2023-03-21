@@ -1,0 +1,10 @@
+{
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/db1c9452-ff27-4936-9c9a-ff7944b85b82/resourceGroups/phishdetectionandguidance/providers/Microsoft.Web/sites/phishdetectionandguidance",
+    "appService.deploySubpath": "dist"
+  }
+  
