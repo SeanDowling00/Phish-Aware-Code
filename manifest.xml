@@ -4,8 +4,8 @@
   <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Phish Detection and Guidance"/>
-  <Description DefaultValue="This tool gives analysis on any URL or Attachment found within an email, while also analysing header information. There is also a guide to phishing and its basics"/>
+  <DisplayName DefaultValue="Phish-Aware"/>
+  <Description DefaultValue="Analyse header information, URLs and Attachments with the click of a button."/>
   <IconUrl DefaultValue="https://phishdetectionandguidance.azurewebsites.net/assets/Magnifier.jpg"/>
   <HighResolutionIconUrl DefaultValue="https://phishdetectionandguidance.azurewebsites.net/assets/Magnifier.jpg"/>
   <SupportUrl DefaultValue="https://api-phish-proxy.azurewebsites.net/scan?url="/>
@@ -99,7 +99,7 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://phishdetectionandguidance.azurewebsites.net/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="Phish Detection and Guidance"/>
+        <bt:String id="GroupLabel" DefaultValue="Phish-Aware"/>
         <bt:String id="TaskpaneButton.Label" DefaultValue="Analyse"/>
         <bt:String id="ActionButton.Label" DefaultValue="Guide"/>
       </bt:ShortStrings>
