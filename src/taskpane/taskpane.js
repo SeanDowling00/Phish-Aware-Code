@@ -95,9 +95,25 @@ export async function run() {
       document.getElementById("item-proceed").innerHTML = proceed;
       document.getElementById("item-subject").innerHTML = "<b>Subject:</b> <br/>" + item.subject;
       document.getElementById("item-to").innerHTML = "<b>To:</b> <br/>" + emailList.join(", ");
-      document.getElementById("item-sender").innerHTML =
-        "<b>Sender: </b></br>(Should match with 'Return Path') <br/>" + item.sender.emailAddress;
-      document.getElementById("item-return").innerHTML = "<b>Return Path:</b> <br/>" + returnPath;
+      var senderMatch = item.sender.emailAddress === returnPath;
+      var senderElement = document.getElementById("item-sender");
+      var returnElement = document.getElementById("item-return");
+
+      if (senderMatch) {
+        senderElement.innerHTML =
+          "<b>Sender:</b><br/>(Should match with 'Return Path')<br/>" +
+          item.sender.emailAddress +
+          " <span style='color:green'>&#10004;</span>";
+        returnElement.innerHTML =
+          "<b>Return Path:</b><br/>" + returnPath + " <span style='color:green'>&#10004;</span>";
+      } else {
+        senderElement.innerHTML =
+          "<b>Sender:</b><br/>(Should match with 'Return Path')<br/>" +
+          item.sender.emailAddress +
+          " <span style='color:red'>&#10006;</span>";
+        returnElement.innerHTML = "<b>Return Path:</b><br/>" + returnPath + " <span style='color:red'>&#10006;</span>";
+      }
+
       document.getElementById("item-date").innerHTML = "<b>Received:</b> <br/>" + item.dateTimeCreated;
       document.getElementById("item-dkim").innerHTML = "<b>DKIM:</b> <br/>" + dkim;
       document.getElementById("item-spf").innerHTML = "<b>SPF:</b> <br/>" + spf;
