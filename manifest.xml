@@ -104,7 +104,7 @@
         <bt:String id="ActionButton.Label" DefaultValue="Guide"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Analyse Header Information, URLs and Attachments"/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Analyse Header Information, URLs and Attachments, and report malicious emails"/>
         <bt:String id="ActionButton.Tooltip" DefaultValue="Guide to Phishing and Common Techniques used"/>
       </bt:LongStrings>
     </Resources>
